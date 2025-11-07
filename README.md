@@ -34,7 +34,7 @@ Developed by:
   cd 9_Project1_BD
   ```
 
-### Step 3: Client interface  
+### Step 4: Client interface  
 You can use either the Web Interface or the Command Line Interface (CLI).
 
 - Option 1 – Web Interface
