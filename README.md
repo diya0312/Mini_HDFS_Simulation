@@ -61,7 +61,7 @@ python3 namenode.py
 - Now open your browser and visit **http://<namenode_ip>:5000/** (Example: http://10.144.198.253:5000/ or http://127.0.0.1:5000/) in your browser to view the Namenode Dashboard,
 where you can see node status, stored chunks, and replication status live.
 
-### Step 4: Start the datanode 0
+### Step 3: Start the datanode 0
 The datanode 0 is responsible for 
    - Chunk reception & storage 
    - Heartbeat sender thread & communication stability 
@@ -75,7 +75,7 @@ python3 datanode.py --id dn0 --port 8001 --namenode http://10.144.198.253:5000 -
 ```
 - here the namenode ip is 10.144.198.253 with port number 5000
 
-### Step 5: Start the datanode 1
+### Step 4: Start the datanode 1
 The datanode 1 is responsible for 
    - Chunk replication & verification
    - Heartbeat sender thread & connectivity
@@ -107,7 +107,7 @@ python3 datanode2.py --id dn1 --port 8002 --namenode http://10.144.198.253:5000 
 ```
 - here the namenode ip is 10.144.198.253 with port number 5000
   
-### Step 6: Client interface  
+### Step 5: Client interface  
 You can use either the Web Interface or the Command Line Interface (CLI).
 
 - Option 1 – Web Interface
