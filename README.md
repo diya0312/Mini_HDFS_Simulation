@@ -21,17 +21,7 @@ Developed by:
    - Receive, store, and serve file chunks.
    - Send periodic heartbeats to the NameNode.
    - Secondary DataNode handles **replication and redundancy**.
-   - **Key Features of datanode 0**
-
-| Feature | Description |
-|----------|--------------|
-| **Chunk Storage** | Receives file chunks, stores them locally, and registers with the NameNode. |
-| **Chunk Retrieval** | Serves requested chunks in base64 format, verifying integrity via checksum. |
-| **Replication** | Sends stored chunks to another DataNode when instructed by the NameNode. |
-| **Heartbeat** | Periodically notifies the NameNode that this DataNode is active. |
-| **Integrity Verification** | Verifies that stored data matches its checksum hash. |
-| **Chunk Deletion** | Deletes chunks and associated checksum files safely. |
-
+  
 
 3. **Client**
    - Provides both CLI and web-based interfaces for users.
