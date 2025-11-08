@@ -9,7 +9,6 @@ HEARTBEAT_TIMEOUT = 12
 REPLICA_FACTOR = 2
 CHECKSUMS = {}
 
-
 state = {"files": {}, "datanodes": {}}
 
 # --------------------------- Metadata Helpers ---------------------------
@@ -24,13 +23,8 @@ def load_metadata():
             state.update(json.load(f))
     return state
 
-# --------------------------- Priority Sorting ---------------------------
+# --------------------------- Sorting ---------------------------
 def sort_datanodes_by_priority(alive_dns, client_ip=None):
-    """
-    Sort datanodes by simulated network proximity to the client.
-    If client_ip is known, prioritize nodes with similar IP prefix.
-    Otherwise, just return in deterministic order.
-    """
     if not client_ip:
         return sorted(alive_dns)
 
