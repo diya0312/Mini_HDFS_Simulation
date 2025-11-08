@@ -74,10 +74,10 @@ It is responsible for storing, retrieving, replicating, verifying, and deleting 
 
 
 
-##  Overview
+**Overview**
 
-Each **DataNode**:
-- Runs as a **Flask web service**.
+Each DataNode:
+- Runs as a Flask web service.
 - Stores chunks of data locally on disk.
 - Responds to client or NameNode requests for storing, retrieving, replicating, verifying, or deleting chunks.
 - Sends heartbeat signals periodically to the NameNode to indicate that it is alive.
@@ -85,7 +85,7 @@ Each **DataNode**:
 - Registers every new chunk with the NameNode after successful storage.
 
 
-##  Key Features
+**Key Features**
 
 | Feature | Description |
 |----------|--------------|
@@ -98,7 +98,7 @@ Each **DataNode**:
 
 
 
-##  Command-Line Arguments
+**Command-Line Arguments**
 
 | Argument | Description | Example |
 |-----------|--------------|----------|
