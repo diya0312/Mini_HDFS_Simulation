@@ -95,24 +95,6 @@ The datanode 1 is responsible for
    - Data validation & checksum consistency
    - Robustness & recovery during node failure tests
 
-## Key Features
-| Feature | Description |
-|----------|-------------|
-| **Chunk Replication** | Receives chunks from other datanodes and stores them with checksum verification. |
-| **Checksum Validation** | Verifies integrity using SHA-256 to prevent corruption. |
-| **Heartbeat Thread** | Sends regular heartbeats to Namenode to indicate node health. |
-| **Recovery Mechanism** | Automatically fetches missing chunks from peers if the node restarts or detects loss. |
-| **REST API Endpoints** | Provides `/store_chunk`, `/replicate_chunk`, `/get_chunk`, `/verify_chunk`, and `/delete_chunk` endpoints for communication. |
-| **Threaded Execution** | Uses background threads for heartbeat and recovery parallelism. |
-
-
-## Threads
-- **Heartbeat Thread:**  
-  Periodically sends a status signal (`/heartbeat`) to the Namenode.  
-- **Recovery Thread:**  
-  Checks for missing chunks and restores them automatically from other datanodes.
-  
-
 You can start the datanode 1 using the command
 ``` bash
 python3 datanode2.py --id dn1 --port 8002 --namenode http://10.144.198.253:5000 --data_dir ./data_dn1
