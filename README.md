@@ -72,7 +72,7 @@ The datanode 0 is responsible for
 This module implements a DataNode for a simplified HDFS-like Distributed File System 
 It is responsible for storing, retrieving, replicating, verifying, and deleting data chunks, and for communicating with the NameNode through periodic heartbeats and registration updates.
 
----
+
 
 ##  Overview
 
@@ -84,7 +84,6 @@ Each **DataNode**:
 - Maintains checksums (SHA-256) to ensure data integrity.
 - Registers every new chunk with the NameNode after successful storage.
 
----
 
 ##  Key Features
 
@@ -97,7 +96,7 @@ Each **DataNode**:
 | **Integrity Verification** | Verifies that stored data matches its checksum hash. |
 | **Chunk Deletion** | Deletes chunks and associated checksum files safely. |
 
----
+
 
 ##  Command-Line Arguments
 
@@ -110,7 +109,7 @@ Each **DataNode**:
 
 If `--data_dir` is not provided, it defaults to `./data_<id>`.
 
----
+
 
 You can start the datanode 0 using the command
 ``` bash
