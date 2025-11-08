@@ -92,7 +92,7 @@ python3 datanode2.py --id dn1 --port 8002 --namenode http://10.144.198.253:5000 
 ```
 - here the namenode ip is 10.144.198.253 with port number 5000
 
-NOTE:Datanode 1 stores all received file chunks — both encrypted and decrypted — in its local data directory, data_dn1/, allowing verification of chunk storage and replication integrity.
+NOTE: Datanode 1 stores all received file chunks — both encrypted and decrypted — in its local data directory, data_dn1/, allowing verification of chunk storage and replication integrity.
 
 
 ### Step 5: Client interface  
