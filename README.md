@@ -58,7 +58,7 @@ python3 namenode.py
         - Replication details and current node states
      > This file is automatically updated whenever new files are uploaded, deleted, or replicated, ensuring persistence even after restarts.
 
-- Now open your browser and visit **http://<namenode_ip>:5000/** (Example: http://10.144.198.253:5000/ or http://127.0.0.1:5000/ in your browser to view the Namenode Dashboard,
+- Now open your browser and visit **http://<namenode_ip>:5000/** (Example: http://10.144.198.253:5000/ or http://127.0.0.1:5000/) in your browser to view the Namenode Dashboard,
 where you can see node status, stored chunks, and replication status live.
 
 ### Step 4: Start the datanode 0
