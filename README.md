@@ -63,13 +63,13 @@ where you can see node status, stored chunks, and replication status live.
 
 ### Step 4: Start the datanode 0
 The datanode 0 is responsible for 
-- 1 Chunk reception & storage 
-- 2 Heartbeat sender thread & communication stability 
-- 3 Retrieval logic for client downloads 
-- 4 Data integrity checks (no corruption on retrieval)
-- 5 Logging & error handling 
+   - Chunk reception & storage 
+   - Heartbeat sender thread & communication stability 
+   - Retrieval logic for client downloads 
+   - Data integrity checks (no corruption on retrieval)
+   - Logging & error handling 
 
-- You can start the datanode 0 using the command
+You can start the datanode 0 using the command
 ``` bash
 python3 datanode.py --id dn0 --port 8001 --namenode http://10.144.198.253:5000 --data_dir ./data_dn0
 ```
