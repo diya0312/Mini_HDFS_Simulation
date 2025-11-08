@@ -21,7 +21,7 @@ Developed by:
    - Receive, store, and serve file chunks.
    - Send periodic heartbeats to the NameNode.
    - Secondary DataNode handles **replication and redundancy**.
-     **Key Features of datanode 0**
+   - **Key Features of datanode 0**
 
 | Feature | Description |
 |----------|--------------|
