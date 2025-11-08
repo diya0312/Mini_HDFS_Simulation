@@ -21,6 +21,17 @@ Developed by:
    - Receive, store, and serve file chunks.
    - Send periodic heartbeats to the NameNode.
    - Secondary DataNode handles **replication and redundancy**.
+     **Key Features of datanode 0**
+
+| Feature | Description |
+|----------|--------------|
+| **Chunk Storage** | Receives file chunks, stores them locally, and registers with the NameNode. |
+| **Chunk Retrieval** | Serves requested chunks in base64 format, verifying integrity via checksum. |
+| **Replication** | Sends stored chunks to another DataNode when instructed by the NameNode. |
+| **Heartbeat** | Periodically notifies the NameNode that this DataNode is active. |
+| **Integrity Verification** | Verifies that stored data matches its checksum hash. |
+| **Chunk Deletion** | Deletes chunks and associated checksum files safely. |
+
 
 3. **Client**
    - Provides both CLI and web-based interfaces for users.
@@ -69,35 +80,6 @@ The datanode 0 is responsible for
    - Data integrity checks (no corruption on retrieval)
    - Logging & error handling
 
-This module implements a DataNode for a simplified HDFS-like Distributed File System 
-It is responsible for storing, retrieving, replicating, verifying, and deleting data chunks, and for communicating with the NameNode through periodic heartbeats and registration updates.
-
-
-
-**Overview**
-
-Each DataNode:
-- Runs as a Flask web service.
-- Stores chunks of data locally on disk.
-- Responds to client or NameNode requests for storing, retrieving, replicating, verifying, or deleting chunks.
-- Sends heartbeat signals periodically to the NameNode to indicate that it is alive.
-- Maintains checksums (SHA-256) to ensure data integrity.
-- Registers every new chunk with the NameNode after successful storage.
-
-
-**Key Features**
-
-| Feature | Description |
-|----------|--------------|
-| **Chunk Storage** | Receives file chunks, stores them locally, and registers with the NameNode. |
-| **Chunk Retrieval** | Serves requested chunks in base64 format, verifying integrity via checksum. |
-| **Replication** | Sends stored chunks to another DataNode when instructed by the NameNode. |
-| **Heartbeat** | Periodically notifies the NameNode that this DataNode is active. |
-| **Integrity Verification** | Verifies that stored data matches its checksum hash. |
-| **Chunk Deletion** | Deletes chunks and associated checksum files safely. |
-
-
-
 **Command-Line Arguments**
 
 | Argument | Description | Example |
@@ -109,13 +91,11 @@ Each DataNode:
 
 If `--data_dir` is not provided, it defaults to `./data_<id>`.
 
-
-
 You can start the datanode 0 using the command
 ``` bash
 python3 datanode0.py --id dn0 --port 8001 --namenode http://10.144.198.253:5000 --data_dir ./data_dn0
 ```
-- here the namenode ip is 10.144.198.253 with port number 5000
+
 
 ### Step 4: Start the datanode 1
 The datanode 1 is responsible for 
