@@ -70,15 +70,6 @@ The datanode 0 is responsible for
    - Data integrity checks (no corruption on retrieval)
    - Logging & error handling
 
-**Command-Line Arguments**
-
-| Argument | Description | Example |
-|-----------|--------------|----------|
-| `--id` | Unique DataNode identifier | `--id dn0` |
-| `--port` | Port number for this DataNode’s Flask app | `--port 8001` |
-| `--namenode` | Base URL of the NameNode | `--namenode http://10.144.198.253:5000` |
-| `--data_dir` | (Optional) Custom directory to store chunks | `--data_dir ./data_dn0` |
-
 If `--data_dir` is not provided, it defaults to `./data_<id>`.
 
 You can start the datanode 0 using the command
@@ -100,7 +91,10 @@ You can start the datanode 1 using the command
 python3 datanode2.py --id dn1 --port 8002 --namenode http://10.144.198.253:5000 --data_dir ./data_dn1
 ```
 - here the namenode ip is 10.144.198.253 with port number 5000
-  
+
+NOTE:Datanode 1 stores all received file chunks — both encrypted and decrypted — in its local data directory, data_dn1/, allowing verification of chunk storage and replication integrity.
+
+
 ### Step 5: Client interface  
 You can use either the Web Interface or the Command Line Interface (CLI).
 
