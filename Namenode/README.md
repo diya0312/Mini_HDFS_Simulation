@@ -4,10 +4,10 @@ This project simulates the working of an HDFS with one NameNode and two DataNode
 
 ## Team Details
 Developed by:
-- Dhanya Prabhu - PES2UG23CS169
-- Diya D Bhat - PES2UG23CS183
-- Delisha Riyona Dsouza - PES2UG23CS166
-- Deesha C - PES2UG23CS165
+- Dhanya Prabhu - PES2UG23CS169 [Client]
+- Diya D Bhat - PES2UG23CS183 [Namenode]
+- Delisha Riyona Dsouza - PES2UG23CS166 [Datanode 0]
+- Deesha C - PES2UG23CS165 [Datanode 1]
 
 ## Project Overview
 
