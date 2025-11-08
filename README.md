@@ -99,8 +99,7 @@ The datanode 1 is responsible for
   Periodically sends a status signal (`/heartbeat`) to the Namenode.  
 - **Recovery Thread:**  
   Checks for missing chunks and restores them automatically from other datanodes.
-
----
+  
 
 You can start the datanode 1 using the command
 ``` bash
