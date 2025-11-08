@@ -85,7 +85,7 @@ The datanode 0 is responsible for
 | Argument | Description | Example |
 |-----------|--------------|----------|
 | `--id` | Unique DataNode identifier | `--id dn0` |
-| `--port` | Port number for this DataNode’s Flask app | `--port 6001` |
+| `--port` | Port number for this DataNode’s Flask app | `--port 8001` |
 | `--namenode` | Base URL of the NameNode | `--namenode http://10.144.198.253:5000` |
 | `--data_dir` | (Optional) Custom directory to store chunks | `--data_dir ./data_dn0` |
 
