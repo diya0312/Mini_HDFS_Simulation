@@ -68,7 +68,7 @@ You can use either the Web Interface or the Command Line Interface (CLI).
     ```bash
     python3 client_web.py
     ```
-  - Now open your browser and visit: http://<client_ip>:5050
+  - Now open your browser and visit: **http://<client_ip>:5050**
   Example: http://10.144.141.149:5050
   - From the web UI, you can:
     1. Upload files
