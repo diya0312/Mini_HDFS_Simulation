@@ -1,0 +1,30 @@
+{
+  "files": {
+    "sample.txt": {
+      "chunks": [
+        "sample.txt.chunk.0",
+        "sample.txt.chunk.1"
+      ],
+      "chunks_info": {
+        "sample.txt.chunk.0": [
+          "dn0"
+        ],
+        "sample.txt.chunk.1": [
+          "dn1"
+        ]
+      }
+    }
+  },
+  "datanodes": {
+    "dn0": {
+      "host": "http://10.144.157.51:8001",
+      "last_seen": 1762437387.8868337,
+      "alive": false
+    },
+    "dn1": {
+      "host": "http://10.144.232.80:8002",
+      "last_seen": 1762437730.788606,
+      "alive": true
+    }
+  }
+}
