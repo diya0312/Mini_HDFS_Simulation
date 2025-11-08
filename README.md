@@ -93,18 +93,6 @@ The datanode 1 is responsible for
 | **REST API Endpoints** | Provides `/store_chunk`, `/replicate_chunk`, `/get_chunk`, `/verify_chunk`, and `/delete_chunk` endpoints for communication. |
 | **Threaded Execution** | Uses background threads for heartbeat and recovery parallelism. |
 
----
-
-## API Endpoints
-| Endpoint | Method | Description |
-|-----------|--------|-------------|
-| `/store_chunk` | POST | Store a new chunk sent by Namenode or client |
-| `/replicate_chunk` | POST | Receive a replicated chunk from another Datanode |
-| `/get_chunk` | GET | Serve stored chunk to client or another Datanode |
-| `/verify_chunk` | GET | Validate stored chunk’s integrity |
-| `/delete_chunk` | POST | Delete a chunk and its checksum file |
-
----
 
 ## Threads
 - **Heartbeat Thread:**  
