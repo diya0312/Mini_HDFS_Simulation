@@ -74,7 +74,22 @@ You can start the datanode 0 using the command
 python3 datanode.py --id dn0 --port 8001 --namenode http://10.144.198.253:5000 --data_dir ./data_dn0
 ```
 - here the namenode ip is 10.144.198.253 with port number 5000
-### Step 5: Client interface  
+
+### Step 5: Start the datanode 1
+The datanode 1 is responsible for 
+   - Chunk replication & verification
+   - Heartbeat sender thread & connectivity
+   - Serving replica chunks to client
+   - Data validation & checksum consistency
+   - Robustness & recovery during node failure tests
+
+You can start the datanode 1 using the command
+``` bash
+python3 datanode2.py --id dn1 --port 8002 --namenode http://10.144.198.253:5000 --data_dir ./data_dn1
+```
+- here the namenode ip is 10.144.198.253 with port number 5000
+  
+### Step 6: Client interface  
 You can use either the Web Interface or the Command Line Interface (CLI).
 
 - Option 1 – Web Interface
