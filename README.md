@@ -4,10 +4,10 @@ This project simulates the working of an HDFS with one NameNode and two DataNode
 
 ## Team Details
 Developed by:
-- Dhanya Prabhu - PES2UG23CS169
-- Diya D Bhat - PES2UG23CS183
-- Delisha Riyona Dsouza - PES2UG23CS166
-- Deesha C - PES2UG23CS165
+- Dhanya Prabhu - PES2UG23CS169 [Client]
+- Diya D Bhat - PES2UG23CS183 [Namenode]
+- Delisha Riyona Dsouza - PES2UG23CS166 [Datanode 0]
+- Deesha C - PES2UG23CS165 [Datanode 1]
 
 ## Project Overview
 
@@ -33,6 +33,33 @@ Developed by:
   git clone https://github.com/pes2ug23cs169/9_Project1_BD.git
   cd 9_Project1_BD
   ```
+### Step 2: Start the NameNode
+
+The Namenode acts as the central controller of the Distributed File System. It maintains the file-to-chunk mappings, assigns chunks to DataNodes, tracks replication, node health and also includes a visual dashboard to monitor Datanodes and stored chunks in real time.
+
+Start the namenode using this below command and run the **namenode.py** file present in the namenode folder.
+```bash
+python3 namenode.py
+```
+
+- Once started, the Namenode:
+
+   - Begins listening on the assigned host and port.
+   - Waits for Datanodes to register and send periodic heartbeats.
+   - Displays all active Datanodes and stored file chunks on the visual dashboard.
+   - Handles all client requests such as:
+        - Uploading files (chunk mapping and replication)
+        - Downloading files
+        - Deleting files
+        - Replicating chunks automatically if a Datanode fails
+   - Maintains a metadata file **(metadata.json)** that stores:
+        - File-to-chunk mappings
+        - Chunk-to-DataNode assignments
+        - Replication details and current node states
+     > This file is automatically updated whenever new files are uploaded, deleted, or replicated, ensuring persistence even after restarts.
+
+- Now open your browser and visit **http://<namenode_ip>:5000/** (Example: http://10.144.198.253:5000/) in your browser to view the Namenode Dashboard,
+where you can see node status, stored chunks, and replication status live.
 
 ### Step 4: Client interface  
 You can use either the Web Interface or the Command Line Interface (CLI).
