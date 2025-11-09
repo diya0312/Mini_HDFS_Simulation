@@ -76,7 +76,7 @@ You can start the datanode 0 using the command
 ``` bash
 python3 datanode0.py --id dn0 --port 8001 --namenode http://10.144.198.253:5000 --data_dir ./data_dn0
 ```
-
+- NOTE: DataNode 0 acts as the primary storage node responsible for receiving, storing, and verifying all original file chunks. It maintains both the raw and checksum-verified versions of each chunk within its local data directory, data_dn0/, ensuring data reliability and enabling seamless replication to other DataNodes.
 
 ### Step 4: Start the datanode 1
 The datanode 1 is responsible for 
