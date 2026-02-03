@@ -30,8 +30,7 @@ Developed by:
 ## Run the project
 ### Step 1: Clone the Repository  
   ```bash
-  git clone https://github.com/pes2ug23cs169/9_Project1_BD.git
-  cd 9_Project1_BD
+  git clone https://github.com/diya0312/Mini_HDFS_Simulation.git
   ```
 ### Step 2: Start the NameNode
 
