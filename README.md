@@ -1,5 +1,4 @@
-## 9_Project1_BD
-**Big Data Mini Project** – Distributed File System Simulation  
+# Mini HDFS Simulation-Exploring Distributed Data Storage 
 This project simulates the working of an HDFS with one NameNode and two DataNodes. The system supports file upload, chunking, replication, and download.
 
 ## Team Details
